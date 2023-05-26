@@ -1,0 +1,16 @@
+When you want to push changes to GitHub, use:
+
+
+git push origin your_branch_name
+And to push changes to AWS CodeCommit, use:
+
+
+git push codecommit your_branch_name
+Keep in mind that you'll need to manage both remotes and their respective branches separately.
+ Make sure to pull and merge changes from both remotes regularly to keep your local repository in sync with both remote repositories.
+
+
+
+
+
+ AWS CodeCommit:  https://git-codecommit.us-east-1.amazonaws.com/v1/repos/NodeJS-BackEnd-Test1
