@@ -1,10 +1,11 @@
 const Product = require('../models/product');
 const Order = require('../models/order');
+const logger = require('../util/logger'); // adjust the path as necessary
 
 exports.getProducts = (req, res, next) => {
   Product.find()
     .then(products => {
-      console.log(products);
+      logger.info(`${Function.prototype.name.call(this)} : ${JSON.stringify(products)}`);
       res.render('shop/product-list', {
         prods: products,
         pageTitle: 'All Products',
@@ -13,7 +14,7 @@ exports.getProducts = (req, res, next) => {
       });
     })
     .catch(err => {
-      console.log(err);
+      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
     });
 };
 
@@ -28,11 +29,10 @@ exports.getProduct = (req, res, next) => {
         isAuthenticated: true
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.getIndex = (req, res, next) => {
-  console.log(`#####- getindex hits in shop ${JSON.stringify(req)}`)
   Product.find()
     .then(products => {
       res.render('shop/index', {
@@ -43,7 +43,7 @@ exports.getIndex = (req, res, next) => {
       });
     })
     .catch(err => {
-      console.log(err);
+      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
     });
 };
 
@@ -60,7 +60,7 @@ exports.getCart = (req, res, next) => {
         isAuthenticated: true
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.postCart = (req, res, next) => {
@@ -82,7 +82,7 @@ exports.postCartDeleteProduct = (req, res, next) => {
     .then(result => {
       res.redirect('/cart');
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.postOrder = (req, res, next) => {
@@ -108,7 +108,7 @@ exports.postOrder = (req, res, next) => {
     .then(() => {
       res.redirect('/orders');
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.getOrders = (req, res, next) => {
@@ -121,5 +121,5 @@ exports.getOrders = (req, res, next) => {
         isAuthenticated: true
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };

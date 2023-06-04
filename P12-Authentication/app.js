@@ -7,15 +7,26 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const cors = require('cors'); // Add this line
+const logger = require('./util/logger'); // assuming logger.js is in the util directory
+
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 const csrdProtection = csrf();  //-- define CSRF---
 
+const cloudUri='mongodb+srv://arkoleini:Test123456789@cluster0.0b8zxrp.mongodb.net/shop?retryWrites=true&w=majority';
+const localUri='mongodb://localhost:27017/shop'
+
+const fs = require('fs');
+
+if (!fs.existsSync(path.join(__dirname, 'Drivelog'))) {
+    fs.mkdirSync(path.join(__dirname, 'Drivelog'));
+}
+
 
 const app = express();
 const store = new MongoDBStore({
-  uri: "mongodb+srv://arkoleini:Test123456789@cluster0.0b8zxrp.mongodb.net/shop?retryWrites=true&w=majority",
+  uri: cloudUri,
   collection: 'session'
 });
 
@@ -56,9 +67,11 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next)=>{
-   res.locals.isAuthenticated = req.session.isLoggedIn;
-   res.locals.csrToken = req.csrfToken();  //----pass every response with cSRF token
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+  res.locals.csrfToken = req.csrfToken();;  //----pass every response with cSRF token
+  next()
 })
+
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
@@ -66,11 +79,11 @@ app.use(authRoutes)
 app.use(errorController.get404);
 
 mongoose
-  .connect('mongodb+srv://arkoleini:Test123456789@cluster0.0b8zxrp.mongodb.net/shop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+.connect(cloudUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
-    console.log(`system started ----> on 3000`)
+    logger.info('system started ----> on 3000 !');
     app.listen(3000);
   })
   .catch(err => {
-    console.log(err);
+    logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
   });

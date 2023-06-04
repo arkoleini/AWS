@@ -1,5 +1,7 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const logger = require('../util/logger'); // adjust the path as necessary
+
 
 exports.getLogin = (req, res, next) => {
   res.render('auth/login', {
@@ -23,23 +25,22 @@ exports.postLogin = (req, res, next) => {
   User.findOne({email: email})
    .then(user=>{
     if (!user){
-      console.log(`@@@@@Not Valid user!`); 
+      logger.info(`${Function.prototype.name.call(this)} : Valid User`);
       return res.redirect('/login');
     }
     bcrypt.compare(password,user.password)
     .then((doMatch)=>{
       if (!doMatch) {  
-        console.log(`@@@@@password is IN-correct !`); 
+        logger.info(`${Function.prototype.name.call(this)} : password is IN-correct !`);
         return res.redirect('/login');
       }
-      console.log(`@@@@@password is correct !`);
+      logger.info(`${Function.prototype.name.call(this)} : password is IN-correct !`);
         req.session.isLoggedIn = true;
         req.session.user = user;
         req.session.save(err => {
           console.log(err);
           res.redirect('/');
         });
-
     })  
    })   
     .catch(err => console.log(err));

@@ -1,4 +1,6 @@
 const Product = require('../models/product');
+const logger = require('../util/logger'); // adjust the path as necessary
+
 
 exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
@@ -25,11 +27,11 @@ exports.postAddProduct = (req, res, next) => {
     .save()
     .then(result => {
       // console.log(result);
-      console.log('Created Product');
+      logger.info(`${Function.prototype.name.call(this)} : Created Product`);
       res.redirect('/admin/products');
     })
     .catch(err => {
-      console.log(err);
+      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
     });
 };
 
@@ -52,7 +54,7 @@ exports.getEditProduct = (req, res, next) => {
         isAuthenticated: true
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -71,14 +73,13 @@ exports.postEditProduct = (req, res, next) => {
       return product.save();
     })
     .then(result => {
-      console.log('UPDATED PRODUCT!');
+      logger.info(`${Function.prototype.name.call(this)} : Updaed product`)
       res.redirect('/admin/products');
     })
-    .catch(err => console.log(err));
+    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
 
 exports.getProducts = (req, res, next) => {
-  console.log(`#####- getProducts hits in shop ${JSON.stringify(req)}`)
   Product.find()
     // .select('title price -_id')
     // .populate('userId', 'name')
@@ -101,5 +102,5 @@ exports.postDeleteProduct = (req, res, next) => {
       console.log('DESTROYED PRODUCT');
       res.redirect('/admin/products');
     })
-    .catch(err => console.log(err));
+    .catch(logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
 };
