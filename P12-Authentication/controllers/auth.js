@@ -22,28 +22,37 @@ exports.getSignup = (req, res, next) => {
 exports.postLogin = (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
+  logger.info(`exports.postLogin  ${email}`)
+  logger.info(`exports.postLogin  ${password}`)
   User.findOne({email: email})
    .then(user=>{
     if (!user){
-      logger.info(`${Function.prototype.name.call(this)} : Valid User`);
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}:Not Valid User`)
       return res.redirect('/login');
     }
     bcrypt.compare(password,user.password)
     .then((doMatch)=>{
       if (!doMatch) {  
-        logger.info(`${Function.prototype.name.call(this)} : password is IN-correct !`);
+        const date_ob = new Date();
+        logger.info(`${date_ob.toISOString()}: password is IN-correct !`);
         return res.redirect('/login');
       }
-      logger.info(`${Function.prototype.name.call(this)} : password is IN-correct !`);
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: password is IN-correct !`);
         req.session.isLoggedIn = true;
         req.session.user = user;
         req.session.save(err => {
-          console.log(err);
+          const date_ob = new Date();
+          logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
           res.redirect('/');
         });
     })  
    })   
-    .catch(err => console.log(err));
+   .catch(err => {
+    const date_ob = new Date();
+    logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
+  })
 };
 
 exports.postSignup = (req, res, next) => {
@@ -66,7 +75,8 @@ exports.postSignup = (req, res, next) => {
 
 exports.postLogout = (req, res, next) => {
   req.session.destroy(err => {
-    console.log(err);
-    res.redirect('/');
-  });
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
+      res.redirect('/');
+    });  
 };

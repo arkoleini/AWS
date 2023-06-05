@@ -63,7 +63,10 @@ app.use((req, res, next) => {
       req.user = user;
       next();
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
+    });
 });
 
 app.use((req, res, next)=>{
@@ -81,9 +84,11 @@ app.use(errorController.get404);
 mongoose
 .connect(cloudUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
-    logger.info('system started ----> on 3000 !');
+    const date_ob = new Date();
+    logger.info(`${date_ob.toISOString()}: System started ----> on 3000`);
     app.listen(3000);
   })
   .catch(err => {
-    logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
+    const date_ob = new Date();
+    logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
   });

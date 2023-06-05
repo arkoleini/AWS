@@ -26,12 +26,13 @@ exports.postAddProduct = (req, res, next) => {
   product
     .save()
     .then(result => {
-      // console.log(result);
-      logger.info(`${Function.prototype.name.call(this)} : Created Product`);
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()} : Created Product`);
       res.redirect('/admin/products');
     })
     .catch(err => {
-      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
     });
 };
 
@@ -54,7 +55,10 @@ exports.getEditProduct = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err =>  {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -73,10 +77,15 @@ exports.postEditProduct = (req, res, next) => {
       return product.save();
     })
     .then(result => {
-      logger.info(`${Function.prototype.name.call(this)} : Updaed product`)
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}:  Product.findById : Updaed product`)
       res.redirect('/admin/products');
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => 
+      {
+        const date_ob = new Date();
+        logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+    });
 };
 
 exports.getProducts = (req, res, next) => {
@@ -92,7 +101,11 @@ exports.getProducts = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => 
+      {
+        const date_ob = new Date();
+        logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+    });
 };
 
 exports.postDeleteProduct = (req, res, next) => {
@@ -102,5 +115,8 @@ exports.postDeleteProduct = (req, res, next) => {
       console.log('DESTROYED PRODUCT');
       res.redirect('/admin/products');
     })
-    .catch(logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(lerr=>{
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`);
+    });
 };

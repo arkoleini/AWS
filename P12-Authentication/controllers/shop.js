@@ -5,7 +5,8 @@ const logger = require('../util/logger'); // adjust the path as necessary
 exports.getProducts = (req, res, next) => {
   Product.find()
     .then(products => {
-      logger.info(`${Function.prototype.name.call(this)} : ${JSON.stringify(products)}`);
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: ${JSON.stringify(products)}`);
       res.render('shop/product-list', {
         prods: products,
         pageTitle: 'All Products',
@@ -13,8 +14,10 @@ exports.getProducts = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => {
-      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
+    .catch(err =>
+      {
+        const date_ob = new Date();
+        logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
     });
 };
 
@@ -29,7 +32,11 @@ exports.getProduct = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => 
+      {
+        const date_ob = new Date();
+        logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+    });
 };
 
 exports.getIndex = (req, res, next) => {
@@ -43,8 +50,9 @@ exports.getIndex = (req, res, next) => {
       });
     })
     .catch(err => {
-      logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`);
-    });
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };
 
 exports.getCart = (req, res, next) => {
@@ -60,7 +68,10 @@ exports.getCart = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };
 
 exports.postCart = (req, res, next) => {
@@ -82,7 +93,10 @@ exports.postCartDeleteProduct = (req, res, next) => {
     .then(result => {
       res.redirect('/cart');
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };
 
 exports.postOrder = (req, res, next) => {
@@ -108,7 +122,10 @@ exports.postOrder = (req, res, next) => {
     .then(() => {
       res.redirect('/orders');
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };
 
 exports.getOrders = (req, res, next) => {
@@ -121,5 +138,8 @@ exports.getOrders = (req, res, next) => {
         isAuthenticated: req.session.isLoggedIn
       });
     })
-    .catch(err => logger.info(`${Function.prototype.name.call(this)} : Error!  ${err}`));
+    .catch(err => {
+      const date_ob = new Date();
+      logger.info(`${date_ob.toISOString()}: Error!  ${err}`)
+  });
 };

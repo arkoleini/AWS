@@ -23,3 +23,95 @@
 {"level":"info","message":"system started ----> on 3000 !"}
 {"level":"info","message":"system started ----> on 3000 !"}
 {"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"Sun Jun 04 2023 22:56:58 GMT-0500 (Central Daylight Time): Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"Sun Jun 04 2023 22:57:14 GMT-0500 (Central Daylight Time): Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"2023-06-05T04:01:47.449Z: Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"2023-06-05T04:02:47.989Z: Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"system started ----> on 3000 !"}
+{"level":"info","message":"2023-06-05T04:02:56.882Z: Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"2023-06-05T04:03:07.365Z: Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"2023-06-05T04:03:10.507Z: Error!  ReferenceError: date is not defined"}
+{"level":"info","message":"2023-06-05T04:03:27.265Z: Error!  TypeError: Function.prototype.name.call is not a function"}
+{"level":"info","message":"2023-06-05T04:03:31.483Z: Error!  TypeError: Function.prototype.name.call is not a function"}
+{"level":"info","message":"2023-06-05T04:04:09.167Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:05:49.272Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:05:52.409Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:06:59.374Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:07:15.591Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:07:54.744Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:08:01.387Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:08:38.449Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:08:46.170Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:09:24.167Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:09:46.054Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:09:55.635Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:10:40.644Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:10:47.013Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:10:51.149Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:11:05.617Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:11:50.487Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:12:00.046Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:12:07.282Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:12:11.151Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:12:45.766Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:13:34.679Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:13:46.228Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:13:59.003Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:14:20.451Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:14:37.565Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:14:57.207Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:15:14.299Z: Error!  TypeError: Function.prototype.name.call is not a function"}
+{"level":"info","message":"2023-06-05T04:16:34.485Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:16:55.114Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:17:06.615Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:17:16.422Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:17:32.129Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:17:58.514Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:18:03.790Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:18:25.638Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:18:49.450Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:18:56.411Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:19:24.943Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:19:37.229Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:20:35.021Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:20:43.598Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:20:50.132Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:21:01.494Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:21:07.673Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:22:32.481Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:24:32.462Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:24:42.580Z: Valid User"}
+{"level":"info","message":"2023-06-05T04:25:03.042Z: Valid User"}
+{"level":"info","message":"2023-06-05T04:26:27.174Z: Valid User"}
+{"level":"info","message":"2023-06-05T04:27:57.495Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:28:26.770Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:28:47.367Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:28:52.352Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:28:57.632Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:29:09.693Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:29:15.009Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:29:18.157Z: System started ----> on 3000"}
+{"level":"info","message":"exports.postLogin  test@test.com"}
+{"level":"info","message":"exports.postLogin  1234"}
+{"level":"info","message":"2023-06-05T04:29:51.582Z:Not Valid User"}
+{"level":"info","message":"exports.postLogin  arkoleini@yahoo.com"}
+{"level":"info","message":"exports.postLogin  ARK9016ark"}
+{"level":"info","message":"2023-06-05T04:31:56.728Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:33:03.101Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:33:13.020Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:33:16.113Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:33:50.432Z: System started ----> on 3000"}
+{"level":"info","message":"2023-06-05T04:33:50.688Z:middle ware is-Auth"}
+{"level":"info","message":"exports.postLogin  arkoleini@yahoo.com"}
+{"level":"info","message":"exports.postLogin  ARK9016ark"}
+{"level":"info","message":"2023-06-05T04:34:02.671Z: password is IN-correct !"}
+{"level":"info","message":"2023-06-05T04:34:02.731Z: Error!  undefined"}
+{"level":"info","message":"2023-06-05T04:34:23.661Z: [{\"_id\":\"631187862df0292c4cdafdf1\",\"title\":\"Honey melon\",\"price\":3.25,\"description\":\"honey melon dew is taste like Honey\",\"imageUrl\":\"https://66.media.tumblr.com/5c98d2b69e75cd4420609dcdf7588aff/tumblr_psrn8sNMt71rkajwk_1280.png\",\"userId\":\"63115b73aa0d5309fcf07475\",\"__v\":0},{\"_id\":\"6310217197ef2038e46e6d3b\",\"title\":\"strawberry\",\"price\":4.25,\"description\":\"red strawberry\",\"imageUrl\":\"https://freepngimg.com/download/strawberry/23452-1-strawberry-picture.png\",\"__v\":0},{\"_id\":\"631020ad97ef2038e46e6d39\",\"title\":\"pear\",\"price\":3.8,\"description\":\"barlot pear\",\"imageUrl\":\"https://purepng.com/public/uploads/large/purepng.com-pear-fruitspearorganicripehealthyfruit-981524676175q2fn5.png\",\"__v\":0},{\"_id\":\"630ee18f17b70a9da418afd3\",\"title\":\"apple\",\"price\":2.24,\"description\":\"green apples\",\"imageUrl\":\"https://th.bing.com/th/id/OIP._GMBRrmxS0Q0SnyeNaZMNgHaIN?w=188&h=209&c=7&r=0&o=5&dpr=1.1&pid=1.7\",\"__v\":0,\"userId\":\"64701a130f525f1d386a8979\"},{\"_id\":\"632003485f21284b14ebaf7c\",\"title\":\"Banana\",\"price\":2.33,\"description\":\"Banana \",\"imageUrl\":\"https://purepng.com/public/uploads/medium/purepng.com-bananafruitsyellowfruit-981524754679nsyxc.png\",\"userId\":\"64701a130f525f1d386a8979\",\"__v\":0},{\"_id\":\"6470257309780c45d041e353\",\"title\":\"Watermelon\",\"price\":6.85,\"description\":\"watermelon slice\",\"imageUrl\":\"https://th.bing.com/th/id/R.87703fcd3df3427d4a2bc2cc0bc98b8e?rik=s0PHztC4KsHFbQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fwatermelon-hd-png-download-png-image-watermelon-png-image-3586.png&ehk=3v6uY5siSHHOSDk47chVxl96o2Rm8vpmcRhZAfPdf%2fk%3d&risl=&pid=ImgRaw&r=0\",\"userId\":\"64701a130f525f1d386a8979\",\"__v\":0},{\"_id\":\"647025b909780c45d041e359\",\"title\":\"Pineapple\",\"price\":4.23,\"description\":\"pineapple\",\"imageUrl\":\"https://secure.img1-cg.wfcdn.com/im/81818660/resize-h445%5Ecompr-r85/1129/112957173/Pineapple+Cardboard+Standup.jpg\",\"userId\":\"64701a130f525f1d386a8979\",\"__v\":0}]"}
