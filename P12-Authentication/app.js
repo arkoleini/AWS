@@ -85,7 +85,7 @@ mongoose
 .connect(cloudUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     const date_ob = new Date();
-    logger.info(`${date_ob.toISOString()}: System started ----> on 3000`);
+    logger.info(`${date_ob.toISOString()}: System started ----> on 3000 V2`);
     app.listen(3000);
   })
   .catch(err => {
