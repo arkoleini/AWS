@@ -1,0 +1,5 @@
+version: 2
+cron: 
+  - name: "task1"
+    url: "/scheduled"
+    schedule: "* * * * *"
