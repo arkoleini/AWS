@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.3
 cron: 
   - name: "task1"
     url: "/scheduled"
