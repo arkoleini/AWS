@@ -1,8 +1,4 @@
-version: 2
-cron: 
-  - name: "task1"
-    url: "/scheduled"
-    schedule: "* * * * *"
+version: 0.2
 phases:
   install:
     commands:
