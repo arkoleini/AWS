@@ -4,3 +4,6 @@ phases:
   install:
     commands:
       - cp -R nodejs-v2-blue/* .
+artifacts:
+  files:
+    - '**/*'
