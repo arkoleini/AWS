@@ -1,9 +1,16 @@
 {
-  "name": "Elastic-Beanstalk-Sample-App",
+  "name": "elastic-beanstalk-sample-app",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
   "scripts": {
     "start": "node app.js"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "aws"
+  },
+  "author": "rezax",
+  "license": "ISC",
+  "description": ""
 }
